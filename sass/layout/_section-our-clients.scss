@@ -1,0 +1,27 @@
+.our-clients__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-clients__link {
+  display: block;
+  color: $fill-social-icon;
+  background-color: $color-logo-wh;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $fill-social-icon;
+  border-radius: 4px;
+
+  &:hover {
+    border-color: $accent-color;
+    fill: currentColor;
+  }
+}
+
+.our-clients__icon {
+  padding: 16px 32px;
+  width: 170px;
+  height: 92px;
+  fill: currentColor;
+  display: block;
+}

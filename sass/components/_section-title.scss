@@ -1,0 +1,8 @@
+.we-intereses__title,
+.our-team__title,
+.our-clients__title {
+  @include text-title-section;
+  color: $color-title;
+  margin-bottom: 50px;
+  text-align: center;
+}

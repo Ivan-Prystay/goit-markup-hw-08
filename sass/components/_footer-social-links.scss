@@ -1,0 +1,16 @@
+.social-links__text,
+.footer-subscribe__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $color-logo-wh;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.social-link--footer {
+  color: $color-logo-wh;
+  background-color: $background-social-footer;
+}

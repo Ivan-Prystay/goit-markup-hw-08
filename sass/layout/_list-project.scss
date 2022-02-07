@@ -1,0 +1,56 @@
+.list-project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+
+  &__item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+    transition: $time-eff;
+
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .list-project__about {
+      transform: translateY(0);
+    }
+  }
+
+  &__wraper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__about {
+    position: absolute;
+    background: #2196f3e5;
+    color: $color-logo-wh;
+    top: 0;
+    @include text-project-about;
+
+    padding: 63px 24px;
+    height: 100%;
+    transform: translateY(100%);
+    transition: $time-eff;
+  }
+
+  &__text {
+    border: solid 1px #eeeeee;
+    border-top: none;
+    padding: 20px 24px;
+  }
+
+  &__name {
+    @include text-project-name;
+    color: $color-title;
+  }
+
+  &__type {
+    @include text-project-type;
+    color: $basic-text;
+  }
+}

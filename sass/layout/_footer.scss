@@ -1,0 +1,13 @@
+.footer {
+  background-color: $footer-background;
+  padding: 60px 0px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-bottom: 20px;
+  }
+}

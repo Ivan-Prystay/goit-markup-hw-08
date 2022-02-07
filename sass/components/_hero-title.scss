@@ -1,0 +1,9 @@
+.hero__title {
+  color: $color-logo-wh;
+  @include text-hero;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 650px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,14 @@
+.link-map {
+  color: $color-logo-wh;
+}
+
+.footer-contacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__contacts,
+.social-links--footer,
+.footer-subscribe {
+  display: block;
+  padding: 0;
+}

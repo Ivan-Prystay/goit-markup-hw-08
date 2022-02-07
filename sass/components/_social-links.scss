@@ -1,0 +1,35 @@
+.social-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  color: $fill-social-icon;
+  background-color: $color-logo-wh;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    display: block;
+  }
+
+  &:hover {
+    color: $color-logo-wh;
+    background-color: $accent-color;
+  }
+}
+
+.social-links {
+  padding: 16px 0 30px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+}

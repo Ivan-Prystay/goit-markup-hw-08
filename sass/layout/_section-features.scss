@@ -1,0 +1,28 @@
+.section-features {
+  padding-bottom: 0px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__logo {
+    width: 270px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-wh;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    @include text-basic;
+    color: $basic-text;
+  }
+}

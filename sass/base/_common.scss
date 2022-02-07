@@ -1,0 +1,45 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: $basic-text;
+  background-color: $color-logo-wh;
+  font-size: 14px;
+}
+
+img {
+  display: block;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  transition: $time-eff;
+}
+
+.link {
+  text-decoration: none;
+  font-style: normal;
+  color: $basic-text;
+  transition: $time-eff;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:corner-present(link) {
+    color-adjust: $accent-color;
+  }
+
+  &:current(link) {
+    color: $accent-color;
+  }
+}
+
+.icon {
+  display: block;
+  fill: currentColor;
+
+  &:hover {
+    fill: $accent-color;
+  }
+}

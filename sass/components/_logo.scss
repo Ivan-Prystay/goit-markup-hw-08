@@ -1,0 +1,16 @@
+.logo {
+  color: $accent-color;
+  font-family: "Raleway", sans-serif;
+  @include text-logo;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &--black {
+    color: $color-logo-bl;
+  }
+
+  &--white {
+    color: $color-logo-wh;
+  }
+}

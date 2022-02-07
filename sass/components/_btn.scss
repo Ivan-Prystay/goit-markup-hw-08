@@ -1,0 +1,16 @@
+.btn-text {
+  background-color: $accent-color;
+  color: $color-logo-wh;
+  font-family: inherit;
+  @include text-btn;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+
+  &:hover,
+  &:focus {
+    color: $color-logo-wh;
+    background-color: $btn-color-hover;
+  }
+}

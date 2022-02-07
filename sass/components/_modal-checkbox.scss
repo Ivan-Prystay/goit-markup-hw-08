@@ -1,0 +1,70 @@
+.modal-form__field--checkbox {
+  margin: 0 auto 30px;
+}
+
+.modal-form__label-checkbox {
+  position: relative;
+  @include text-basic;
+  color: $basic-text;
+  margin-left: 35px;
+}
+
+/*  оформлення checkbox через background-image */
+
+/* .input-checkbox:checked + .icon-checkbox {
+  background-image: url(../images/icon-check.svg);
+  background-color: $accent-color;
+  border-color: $accent-color;
+  border: none;
+} */
+
+.modal-form__icon-checkbox {
+  width: 16px;
+  height: 15px;
+  border-radius: 4px;
+  border: solid $color-title 2px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -25px;
+  display: flex;
+}
+
+.modal-form__input-checkbox:checked + .modal-form__icon-checkbox {
+  background-color: $accent-color;
+  border-color: $accent-color;
+  border: none;
+}
+
+.modal-form__icon-check {
+  fill: transparent;
+}
+
+.modal-form__input-checkbox:checked
+  + .modal-form__icon-checkbox
+  .modal-form__icon-check {
+  align-items: center;
+  justify-content: center;
+  fill: $color-logo-wh;
+}
+
+.modal-form__link-checkbox {
+  color: $accent-color;
+  border-bottom: solid 1px $accent-color;
+}
+
+.btn-modal {
+  padding: 10px 55px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.visualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
