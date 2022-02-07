@@ -1,17 +1,19 @@
 .section-features {
-  padding-bottom: 0px;
+  // padding-bottom: 0px;
 }
 
 .features-list {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
+  margin-bottom: -30px;
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__item {
+    margin-bottom: 30px;
   }
 
   &__logo {
-    width: 270px;
+    // width: 270px;
+    max-width: 450px;
     height: 120px;
     display: flex;
     justify-content: center;

@@ -25,6 +25,8 @@ body {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 button {
@@ -71,9 +73,28 @@ button {
 }
 
 .container {
-  width: 1200px;
-  padding: 0 15px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-widht: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-widht: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (min-widht: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .header__container {
@@ -207,24 +228,19 @@ button {
 }
 
 .section {
-  padding: 94px 0px;
-}
-
-.section-features {
-  padding-bottom: 0px;
+  padding: 60px 0px;
 }
 
 .features-list {
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: -30px;
 }
 
-.features-list__item:not(:last-child) {
-  margin-right: 30px;
+.features-list__item {
+  margin-bottom: 30px;
 }
 
 .features-list__logo {
-  width: 270px;
+  max-width: 450px;
   height: 120px;
   display: flex;
   justify-content: center;
@@ -256,12 +272,16 @@ button {
 .our-team__title,
 .our-clients__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
+}
+
+.we-intereses {
+  display: none;
 }
 
 .we-intereses__list {
@@ -290,19 +310,20 @@ button {
 }
 
 .our-team__list {
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: -30px;
 }
 
 .our-team__item {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  padding-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .our-team__text {
   margin: 0;
-  margin: 30px auto 0;
+  margin: 30px auto 16px;
   text-align: center;
 }
 
@@ -343,10 +364,6 @@ button {
 .social-link:hover {
   color: #ffffff;
   background-color: #2196f3;
-}
-
-.social-links {
-  padding: 16px 0 30px;
 }
 
 .social-links__list {

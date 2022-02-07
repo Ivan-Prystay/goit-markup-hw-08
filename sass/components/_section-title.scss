@@ -3,6 +3,7 @@
 .our-clients__title {
   @include text-title-section;
   color: $color-title;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
 }
