@@ -1,6 +1,4 @@
 .we-intereses {
-  display: none;
-
   &__list {
     display: flex;
     justify-content: space-between;
@@ -20,5 +18,9 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $color-logo-wh;
+  }
+
+  @media screen and(max-width:1201px) {
+    display: none;
   }
 }

@@ -1,6 +1,6 @@
-.section-features {
-  // padding-bottom: 0px;
-}
+// .section-features {
+// padding-bottom: 0px;
+// }
 
 .features-list {
   // display: flex;
@@ -21,6 +21,13 @@
     background-color: $background-wh;
     border-radius: 4px;
     margin-bottom: 30px;
+  }
+
+  &__title {
+    @include text-features-title;
+    color: $color-title;
+    text-align: center;
+    margin-bottom: 10px;
   }
 
   &__text {

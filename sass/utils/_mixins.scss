@@ -21,6 +21,14 @@
   letter-spacing: 0.03em;
 }
 
+@mixin text-features-title() {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 @mixin text-hero() {
   font-weight: 900;
   font-size: 44px;
@@ -30,11 +38,13 @@
 
 @mixin text-title-section() {
   font-weight: 700;
-  // font-size: 36px;
-  // line-height: 1.16;
   font-size: 28px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  @media screen and(min-width:1200px) {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 @mixin text-btn() {
@@ -92,3 +102,5 @@
   line-height: 1.15;
   letter-spacing: 0.03em;
 }
+
+// Type device
