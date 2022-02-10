@@ -3,11 +3,40 @@
   padding: 60px 0px;
 
   &__container {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+
+    @media screen and(min-width:768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @media screen and(min-width:1200px) {
+      display: flex;
+      justify-content: space-between;
+      text-align: start;
+    }
   }
 
   &__logo {
     margin-bottom: 20px;
+    justify-content: center;
+
+    @media screen and(min-width:1200px) {
+      justify-content: start;
+    }
+  }
+}
+
+.footer__contacts,
+.social-links--footer,
+.footer-subscribe:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.footer__contacts,
+.social-links--footer,
+.footer-subscribe {
+  @media screen and(min-width:1200px) {
+    margin-bottom: 0;
   }
 }
