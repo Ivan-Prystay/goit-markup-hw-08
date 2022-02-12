@@ -98,6 +98,9 @@
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
+  @media screen and(max-width:479px) {
+    font-size: 14px;
+  }
 }
 
 @mixin text-modal-title() {

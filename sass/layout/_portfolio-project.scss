@@ -40,7 +40,19 @@
     top: 0;
     @include text-project-about;
 
-    padding: 63px 24px;
+    padding: 77px 24px;
+    @media screen and(min-width:768px) {
+      padding: 49px 24px;
+    }
+
+    @media screen and(min-width:1200px) {
+      padding: 63px 24px;
+    }
+
+    @media screen and(max-width:479px) {
+      padding: 24px 24px;
+    }
+
     height: 100%;
     transform: translateY(100%);
     transition: $time-eff;
