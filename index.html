@@ -23,7 +23,7 @@
   </head>
   <body>
     <!----------- Шапка ------------>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a class="logo link" href="./index.html" lang="en"
@@ -72,8 +72,110 @@
             </a>
           </li>
         </ul>
+
+        <button type="button" class="open-mob-menu" data-menu-open>
+          <svg class="icon mob-menu__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <!--!                Mobile menu                         -->
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-menu-container">
+          <button type="button" class="close-mob-menu" data-menu-close>
+            <svg class="icon mob-menu__icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-menu-close"></use>
+            </svg>
+          </button>
+
+          <div class="wraper-menu__nav">
+            <ul class="mob-menu__list">
+              <li class="mob-menu__item">
+                <a
+                  href="./index.html"
+                  class="link mob-menu__link mob-menu__link--active"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="./portfolio.html" class="link mob-menu__link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="#contacts" class="link mob-menu__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="wraper-menu__contact">
+            <ul class="mob-menu-contact">
+              <li class="mob-menu-contact__item">
+                <a
+                  href="tel:+380991111111"
+                  class="link mob-menu-contact__link--tel"
+                  >+38 099 111 11 11</a
+                >
+              </li>
+
+              <li class="mob-menu-contact__item">
+                <a
+                  href="mailto:info@example.com"
+                  class="link mob-menu-contact__link--email"
+                  >info@example.com</a
+                >
+              </li>
+            </ul>
+
+            <div class="mob-social">
+              <ul class="mob-social__list">
+                <li class="mob-social__item">
+                  <a
+                    href="http://www.instagram.com"
+                    target="_blank"
+                    rel="noopener, noreferrer"
+                    class="link mob-social-link"
+                  >
+                    Instagram
+                  </a>
+                </li>
+                <li class="mob-social__item">
+                  <a
+                    href="http://twitter.com"
+                    target="_blank"
+                    rel="noopener, noreferrer"
+                    class="link mob-social-link"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li class="mob-social__item">
+                  <a
+                    href="http://www.facebook.com"
+                    target="_blank"
+                    rel="noopener, noreferrer"
+                    class="link mob-social-link"
+                  >
+                    Facebook
+                  </a>
+                </li>
+                <li class="mob-social__item">
+                  <a
+                    href="http://www.linkedin.com"
+                    target="_blank"
+                    rel="noopener, noreferrer"
+                    class="link mob-social-link"
+                  >
+                    Linkedin
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <!----------- Основний контент ------------->
     <main>
@@ -150,16 +252,25 @@
           <h2 class="we-intereses__title">Чем мы занимаемся</h2>
           <ul class="we-intereses__list">
             <li class="we-intereses__item">
-              <img
-                src="./images/img-1-min.jpg"
-                alt="Специалист набирает текст на клавиатуре"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/we-intereses/img-1-1x.jpg 1x,
+                    ./images/we-intereses/img-1-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="./images/we-intereses/img-1-1x.jpg"
+                  alt="Специалист набирает текст на клавиатуре"
+                />
+              </picture>
+
               <b class="we-intereses__text">Десктопные приложения</b>
             </li>
             <li class="we-intereses__item">
               <img
-                src="./images/img-2-min.jpg"
+                src="./images/we-intereses/img-2-1x.jpg"
                 alt="Специалист на ноутбуке создает приложение для мобильних устройств"
                 width="370"
               />
@@ -167,7 +278,7 @@
             </li>
             <li class="we-intereses__item">
               <img
-                src="./images/img-3-min.jpg"
+                src="./images/we-intereses/img-3-1x.jpg"
                 alt="Специалист держит в руке планшетное устройство с изображением цветовой палитры"
                 width="370"
               />
@@ -184,11 +295,35 @@
           <h2 class="our-team__title">Наша команда</h2>
           <ul class="our-team__list">
             <li class="our-team__item">
-              <img
-                src="./images/img-igor-min.jpg"
-                alt="Фотокарточка Игоря Демьяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/img-igor-1x.jpg 1x,
+                    ./images/team/img-igor-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/img-igor-tab-1x.jpg 1x,
+                    ./images/team/img-igor-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/img-igor-mob-1x.jpg 1x,
+                    ./images/team/img-igor-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img
+                  src="./images/team/img-igor-1x.jpg"
+                  alt="Фотокарточка Игоря Демьяненко"
+                />
+              </picture>
+
               <div class="our-team__text">
                 <h3 class="our-team__name-person">Игорь Демьяненко</h3>
                 <p class="our-team__position" lang="en">Product Designer</p>
@@ -247,11 +382,35 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img
-                src="./images/img-olga-min.jpg"
-                alt="Фотокарточка Ольги Репиной"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/img-olga-1x.jpg 1x,
+                    ./images/team/img-olga-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/img-olga-tab-1x.jpg 1x,
+                    ./images/team/img-olga-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/img-olga-mob-1x.jpg 1x,
+                    ./images/team/img-olga-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img
+                  src="./images/team/img-olga-1x.jpg"
+                  alt="Фотокарточка Ольги Репиной"
+                />
+              </picture>
+
               <div class="our-team__text">
                 <h3 class="our-team__name-person">Ольга Репина</h3>
                 <p class="our-team__position" lang="en">Frontend Developer</p>
@@ -310,11 +469,35 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img
-                src="./images/img-nikolaj-min.jpg"
-                alt="Фотокарточка Николая Тарасова"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/img-nikolaj-1x.jpg 1x,
+                    ./images/team/img-nikolaj-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/img-nikolaj-tab-1x.jpg 1x,
+                    ./images/team/img-nikolaj-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/img-nikolaj-mob-1x.jpg 1x,
+                    ./images/team/img-nikolaj-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img
+                  src="./images/team/img-nikolaj-1x.jpg"
+                  alt="Фотокарточка Николая Тарасова"
+                />
+              </picture>
+
               <div class="our-team__text">
                 <h3 class="our-team__name-person">Николай Тарасов</h3>
                 <p class="our-team__position" lang="en">Marketing</p>
@@ -373,11 +556,35 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img
-                src="./images/img-miha-min.jpg"
-                alt="Фотокарточка Михаила Ермакова"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/img-miha-1x.jpg 1x,
+                    ./images/team/img-miha-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/img-miha-tab-1x.jpg 1x,
+                    ./images/team/img-miha-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/img-miha-mob-1x.jpg 1x,
+                    ./images/team/img-miha-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img
+                  src="./images/team/img-miha-1x.jpg"
+                  alt="Фотокарточка Михаила Ермакова"
+                />
+              </picture>
+
               <div class="our-team__text">
                 <h3 class="our-team__name-person">Михаил Ермаков</h3>
                 <p class="our-team__position" lang="en">UI Designer</p>
@@ -753,5 +960,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

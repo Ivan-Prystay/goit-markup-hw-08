@@ -1,6 +1,8 @@
 .header__container {
   display: flex;
+  border-bottom: 1px solid #ececec;
+  width: 100%;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid $header-border;
 }

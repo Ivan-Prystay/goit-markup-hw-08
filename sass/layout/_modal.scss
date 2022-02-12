@@ -1,6 +1,16 @@
 .modal {
-  width: 528px;
-  min-height: 582px;
+  width: 97vw;
+  // max-height: 95vh;
+  height: auto;
+
+  @media screen and(min-width:480px) {
+    width: 450px;
+    min-height: 609px;
+  }
+  @media screen and(min-width:1200px) {
+    width: 528px;
+    min-height: 582px;
+  }
   background-color: $color-logo-wh;
   position: absolute;
   top: 50%;
@@ -11,6 +21,9 @@
   transform: translate(-50%, -50%) scale(1);
   transition: $time-eff;
   padding: 40px;
+  @media screen and(max-width:479px) {
+    padding: 15px;
+  }
 
   &-close__btn {
     width: 30px;

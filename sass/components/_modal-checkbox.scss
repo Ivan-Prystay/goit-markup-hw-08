@@ -1,12 +1,21 @@
 .modal-form__field--checkbox {
   margin: 0 auto 30px;
+  @media screen and(max-width:479px) {
+    margin: 0 auto 10px;
+  }
 }
 
 .modal-form__label-checkbox {
   position: relative;
   @include text-basic;
   color: $basic-text;
-  margin-left: 35px;
+  margin-left: 25px;
+  @media screen and(max-width:1199px) {
+    font-size: 12px;
+  }
+  @media screen and(max-width:479px) {
+    letter-spacing: 0.01em;
+  }
 }
 
 /*  оформлення checkbox через background-image */
@@ -56,6 +65,9 @@
 .btn-modal {
   padding: 10px 55px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @media screen and(max-width:479px) {
+    padding: 5px 15px;
+  }
 }
 
 .visualy-hidden {
